@@ -1,2 +1,3 @@
 # NVIM_Config
-The title pretty much says it all
+
+Lua folders for all of my personal config and plugins, also has some instructions to install it either on Windows or linux
