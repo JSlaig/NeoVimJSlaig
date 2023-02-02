@@ -29,7 +29,10 @@ return require('packer').startup(function(use)
     requires = { {'nvim-lua/plenary.nvim'} }
   }
   
-  -- use 'foo1/bar1.nvim'CNES00615534078
+  -- VimBeGood -> Game to get used to shortcuts
+  use('ThePrimeagen/vim-be-good') 
+
+  -- use 'foo1/bar1.nvim'
   -- use 'foo2/bar2.nvim'
 
   -- Automatically set up your configuration after cloning packer.nvim
