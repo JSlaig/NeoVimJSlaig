@@ -14,6 +14,7 @@ This repo contains all the files that when cloned into a specific path, gets eve
 ## NVIM installation command on Windows
 
 "winget search nvim"
+and then
 "winget install Neovim.Neovim"
 
 ### Can use Scoop or Chocolatey as well
