@@ -18,4 +18,5 @@ This repo contains all the files that when cloned into a specific path, gets eve
 
 ### Can use Scoop or Chocolatey as well
 "scoop install neovim"
+or
 "choco install neovim"
