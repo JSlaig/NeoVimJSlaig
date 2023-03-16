@@ -15,13 +15,13 @@ This repository contains my configuration files for Neovim, which include my pre
 2. Clone this repository into the following directory:
 
     ```
-    C:\Users\<your_username>\AppData\Local\nvim\
+    ~\AppData\Local\nvim\
     ```
 
 3. Copy the `init.vim` and `coc-settings.json` files from the cloned repository to the following directory:
 
     ```
-    C:\Users\<your_username>\AppData\Local\nvim\
+    ~\AppData\Local\nvim\
     ```
 
 ### Linux and macOS
