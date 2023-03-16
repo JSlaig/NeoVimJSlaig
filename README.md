@@ -89,6 +89,6 @@ Here are some of the most important Vim motion keybinds that are used in this co
 
 #### Search
 
-- `Ctrl + p
+- `Ctrl + p`
 
 
