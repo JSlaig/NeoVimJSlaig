@@ -25,8 +25,5 @@ mapper("n", "<Leader>w", ":w<CR>")
 -- "q" to quit
 mapper("n", "q", ":q<CR>")
 
--- "<Space>qq" to fast quit
-mapper("n", "<Leader>qq", ":q!<CR>")
-
 -- "tt" To duplicate line
 mapper("n", "tt", ":t.<CR>")
