@@ -17,13 +17,7 @@ This repository contains my configuration files for Neovim, which include my pre
     ```
     ~\AppData\Local\nvim\
     ```
-
-3. Copy the `init.vim` and `coc-settings.json` files from the cloned repository to the following directory:
-
-    ```
-    ~\AppData\Local\nvim\
-    ```
-
+    
 ### Linux and macOS
 
 1. Install Neovim using your package manager:
@@ -31,13 +25,7 @@ This repository contains my configuration files for Neovim, which include my pre
    - Debian/Ubuntu: `sudo apt-get install neovim`
    - macOS: `brew install neovim`
 
-2. Clone this repository to your home directory:
-
-    ```
-    git clone https://github.com/<your_username>/<repository>.git ~/nvim-config
-    ```
-
-3. Copy the `init.vim` and `coc-settings.json` files from the cloned repository to the following directory:
+2. Clone this repository into the following directory:
 
    - Linux: `~/.config/nvim/`
    - macOS: `~/.config/nvim/`
