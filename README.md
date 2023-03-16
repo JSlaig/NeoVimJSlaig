@@ -80,3 +80,25 @@ Here are some of the most important Vim motion keybinds that are used in this co
 #### Search
 
 - `Ctrl + p
+
+### Lualine
+
+[Lualine](https://github.com/hoob3rt/lualine.nvim) is a fast and customizable statusline for Vim that displays information such as the current file name, line number, and Git branch. Here are some of the keybinds for Lualine:
+
+- `Ctrl + g`: Toggle the Git branch display
+- `Ctrl + r`: Refresh the statusline
+
+### Treesitter
+
+[Treesitter](https://github.com/nvim-treesitter/nvim-treesitter) is a parser generator for programming languages that provides syntax highlighting, folding, and indentation. It also allows for more advanced features such as code highlighting and better code completion. Here are some of the keybinds for Treesitter:
+
+- `:TSPlaygroundToggle`: Toggle the Treesitter Playground
+- `:TSHighlightCapturesUnderCursor`: Show the syntax highlighting groups for the text under the cursor
+
+### Telescope
+
+[Telescope](https://github.com/nvim-telescope/telescope.nvim) is a highly extensible fuzzy finder for Vim that allows you to quickly search for files, buffers, and more. Here are some of the keybinds for Telescope:
+
+- `Ctrl + p`: Open the Telescope prompt to search for files
+- `Ctrl + b`: Open the Telescope prompt to search for buffers
+- `Ctrl + g`: Open the Telescope prompt to search for Git files
