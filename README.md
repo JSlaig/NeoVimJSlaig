@@ -1,5 +1,3 @@
-
-~~~ 
 # Neovim Configuration
 
 This repository contains my configuration files for Neovim, which include my preferred plugins and keybinds.
