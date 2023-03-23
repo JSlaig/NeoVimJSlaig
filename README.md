@@ -61,9 +61,8 @@ This configuration uses the following plugins:
 
 [Telescope](https://github.com/nvim-telescope/telescope.nvim) is a highly extensible fuzzy finder for Vim that allows you to quickly search for files, buffers, and more. Here are some of the keybinds for Telescope:
 
-- `Ctrl + p`: Open the Telescope prompt to search for files
-- `Ctrl + b`: Open the Telescope prompt to search for buffers
-- `Ctrl + g`: Open the Telescope prompt to search for Git files
+- `Ctrl + o`: Open the Telescope prompt to search for all files
+- `Ctrl + p`: Open the Telescope prompt to search for Git files
 
 ### General Keybinds
 
@@ -87,8 +86,5 @@ Here are some of the most important Vim motion keybinds that are used in this co
 - `Ctrl + s`: Save the current buffer
 - `Ctrl + q`: Close the current buffer without saving
 
-#### Search
-
-- `Ctrl + p`
 
 
