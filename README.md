@@ -17,6 +17,8 @@ This repository contains my configuration files for Neovim, which include my pre
     ```
     ~\AppData\Local\nvim\
     ```
+    > **Note:** You may want to compile the plugins using ``:PackerSync`` command afterwards.
+
     
 ### Linux and macOS
 
