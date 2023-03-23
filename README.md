@@ -48,7 +48,8 @@ This configuration uses the following plugins:
 - [Fugitive](https://github.com/tpope/vim-fugitive): A Git wrapper for Vim
 - [LSP-Zero](https://github.com/creativenull/lsp-zero.nvim): A lightweight Language Server Protocol implementation for Neovim
 
-##Keybinds
+
+## Keybinds
 
 ### General Keybinds
 
