@@ -72,7 +72,7 @@ Here are some of the most important Vim motion keybinds that are used in this co
 - `Ctrl + s`: Save the current buffer
 - `Ctrl + q`: Close the current buffer without saving
 
-### Plugin keybinds
+### Plugin keybinds & functions
 
 #### Lualine
 
