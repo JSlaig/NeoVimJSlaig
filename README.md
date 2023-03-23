@@ -33,7 +33,7 @@ This repository contains my configuration files for Neovim, which include my pre
    - Linux: `~/.config/nvim/`
    - macOS: `~/.config/nvim/`
    
-   > **Note:** You may want to compile the plugins using ``:PackerSync`` command afterwards.
+   > **Note:** You may want to compile the plugins using `:PackerSync` command afterwards.
 
 ## Plugins
 
