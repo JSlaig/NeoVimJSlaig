@@ -50,6 +50,9 @@ return require('packer').startup(function(use)
   -- Git integration
   use ('tpope/vim-fugitive')
 
+  -- Funtion summary
+  use ( 'preservim/tagbar')
+
   -- LSP
   use {
     'VonHeikemen/lsp-zero.nvim',
