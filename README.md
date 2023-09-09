@@ -88,7 +88,10 @@ Here are some of the most important Vim motion keybinds that are used in this co
 #### Telescope
 
 - `Ctrl + o`: Open the Telescope prompt to search for all files
-- `Ctrl + p`: Open the Telescope prompt to search for Git files
+- `Ctrl + p`: Open the Telescope prompt to use live-grep on files
+   > **Note:** You need to install some dependencies with a package manager such as apt, chocolatey or brew.
+   > **Note:** Dependencies are: **fd** and **ripgrep**.
+
 
 
 
