@@ -64,21 +64,26 @@ Here are some of the most important Vim motion keybinds that are used in this co
 - `Ctrl + o`: Move to the previous cursor position
 - `Ctrl + i`: Move to the next cursor position
 
+
+   > **Note:** These work either in normal and visual mode.
+- `Ctrl + h`: Move to the start of the line
+- `Ctrl + l`: Move to the end of the line
+- `Ctrl + j`: Move to the end of the file
+- `Ctrl + k`: Move to the start of the file
+
+
 #### Editing
 
-- `Ctrl + a`: Select all text in the buffer
-- `Ctrl + x`: Cut selected text to system clipboard
-- `Ctrl + c`: Copy selected text to system clipboard
-- `Ctrl + v`: Paste text from system clipboard
-- `Ctrl + s`: Save the current buffer
-- `Ctrl + q`: Close the current buffer without saving
+- `x`: Cut selected text to system clipboard
+- `xx`: Cut selected line to system clipboard
+- `c`: Copy selected text to system clipboard
+- `cc`: Copy current line to system clipboard
+- `p`: Paste text from system clipboard
+- `r`: To redo changes
+- `u`: To undo changes
 
 ### Plugin keybinds & functions
 
-#### Lualine
-
-- `Ctrl + g`: Toggle the Git branch display
-- `Ctrl + r`: Refresh the statusline
 
 #### Treesitter
 
@@ -91,6 +96,20 @@ Here are some of the most important Vim motion keybinds that are used in this co
 - `Ctrl + p`: Open the Telescope prompt to use live-grep on files
    > **Note:** You need to install some dependencies with a package manager such as apt, chocolatey or brew.
    > **Note:** Dependencies are: **fd** and **ripgrep**.
+
+#### Harpoon
+
+- `<leader> + h`: Open Harpoon menu
+- `<leader> + a`: Add file to Harpoon
+- `<leader> + j`: Navigate to next "Harpooned" file
+- `<leader> + k`: Navigate to previous "Harpooned" file
+- `<leader> + 1-4`: Navigate to the "n Harpooned" file
+
+#### Tagbar
+
+- `Ctrl + b`: Toggle tagbar menu
+
+
 
 
 

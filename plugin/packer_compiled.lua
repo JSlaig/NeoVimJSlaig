@@ -105,7 +105,7 @@ _G.packer_plugins = {
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
   ["dashboard-nvim"] = {
-    config = { "\27LJ\2\n�\2\0\0\6\0\v\0\0176\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\5\0005\4\4\0=\4\6\0034\4\3\0005\5\a\0>\5\1\0045\5\b\0>\5\2\4=\4\t\3=\3\n\2B\0\2\1K\0\1\0\vconfig\rshortcut\1\0\4\tdesc\20 ColorScheme\vaction\ncolor\bkey\6a\ngroup\16Personalize\1\0\6\tdesc\nFiles\ficon_hl\14@variable\bkey\6f\ticon\t \vaction\25Telescope find_files\ngroup\nLabel\16week_header\1\0\0\1\0\1\venable\2\1\0\1\ntheme\nhyper\nsetup\14dashboard\frequire\0" },
+    config = { "\27LJ\2\n�\2\0\0\6\0\v\0\0176\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\5\0005\4\4\0=\4\6\0034\4\3\0005\5\a\0>\5\1\0045\5\b\0>\5\2\4=\4\t\3=\3\n\2B\0\2\1K\0\1\0\vconfig\rshortcut\1\0\4\vaction\ncolor\tdesc\20 ColorScheme\ngroup\16Personalize\bkey\6a\1\0\6\vaction\25Telescope find_files\tdesc\nFiles\ngroup\nLabel\bkey\6f\ficon_hl\14@variable\ticon\t \16week_header\1\0\0\1\0\1\venable\2\1\0\1\ntheme\nhyper\nsetup\14dashboard\frequire\0" },
     loaded = false,
     needs_bufread = false,
     only_cond = false,
