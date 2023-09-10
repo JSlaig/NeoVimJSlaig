@@ -72,7 +72,7 @@ Here are some of the most important Vim motion keybinds that are used in this co
 - `Ctrl + l`: Move to the end of the line
 - `Ctrl + j`: Move to the end of the file
 - `Ctrl + k`: Move to the start of the file
--    > **Note:** These work either in normal and visual mode.
+    > **Note:** These work either in normal and visual mode.
 
 
 
