@@ -47,6 +47,9 @@ This configuration uses the following plugins:
 - [Undotree](https://github.com/mbbill/undotree): A visualizer for undo history tree
 - [Fugitive](https://github.com/tpope/vim-fugitive): A Git wrapper for Vim
 - [LSP-Zero](https://github.com/creativenull/lsp-zero.nvim): A lightweight Language Server Protocol implementation for Neovim
+- [Dashboard](https://github.com/glepnir/dashboard-nvim): A customizable dashboard for Neovim
+- [Tagbar](https://github.com/majutsushi/tagbar): A sidebar that displays tags generated from source code
+
 
 
 ## Keybinds
@@ -65,11 +68,12 @@ Here are some of the most important Vim motion keybinds that are used in this co
 - `Ctrl + i`: Move to the next cursor position
 
 
-   > **Note:** These work either in normal and visual mode.
 - `Ctrl + h`: Move to the start of the line
 - `Ctrl + l`: Move to the end of the line
 - `Ctrl + j`: Move to the end of the file
 - `Ctrl + k`: Move to the start of the file
+-    > **Note:** These work either in normal and visual mode.
+
 
 
 #### Editing
