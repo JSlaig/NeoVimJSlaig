@@ -35,9 +35,12 @@ mapper("x", "x", '"+d')
 -- Copy a whole line in normal mode by double-tapping "c"
 mapper("n", "cc", 'yy')
 
+-- Command to move highlighted lines
+mapper("x", "<c-u>", ":m '>+1<cr>gv=gv")
+mapper("x", "<c-i>", ":m '<-2<cr>gv=gv")
+
 -- Cut a whole line in normal mode by double-tapping "x"
 mapper("n", "xx", 'dd')
-
 
 -- Mappings for fast moving across the file
 
