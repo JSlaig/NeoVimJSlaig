@@ -19,8 +19,11 @@ vim.opt.shiftwidth = 2
 vim.opt.shiftround = true
 vim.opt.expandtab = true
 
+-- ############################################################################
 -- Mappings for quick editing the file
+-- ############################################################################
 
+-- "r" to re-do
 mapper("n", "r", "<C-r>")
 
 -- "tt" To duplicate line
@@ -34,19 +37,26 @@ mapper("x", "x", '"+d')
 
 -- Copy a whole line in normal mode by double-tapping "c"
 mapper("n", "cc", 'yy')
+-- Cut a whole line in normal mode by double-tapping "x"
+mapper("n", "xx", 'dd')
 
 -- Command to move highlighted lines
 mapper("x", "<c-u>", ":m '>+1<cr>gv=gv")
 mapper("x", "<c-i>", ":m '<-2<cr>gv=gv")
 
--- Cut a whole line in normal mode by double-tapping "x"
-mapper("n", "xx", 'dd')
 
+-- ############################################################################
 -- Mappings for fast moving across the file
+-- ############################################################################
 
+-- "<leader>q" to quit
+mapper("n", "<leader>q", ":q!<CR>")
 
--- "q" to quit
-mapper("n", "q", ":q!<CR>")
+-- "<leader>wq" to save and quit
+mapper("n", "<leader>q", ":wq<CR>")
+
+-- "<leader>w" to save
+mapper("n", "<leader>w", ":w<CR>")
 
 -- Go to the end of the file with Ctrl + J
 mapper("n", "<C-j>", "]]")
