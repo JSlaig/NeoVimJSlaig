@@ -73,3 +73,8 @@ mapper("x", "<C-l>", "$")
 -- Go to the start of the line with Ctrl + H
 mapper("n", "<C-h>", "^")
 mapper("x", "<C-h>", "^")
+
+-- Create split
+mapper("n", "<leader>s", ":vsplit<CR>")
+mapper("n", "<leader>m", "<C-w>h")
+mapper("n", "<leader>,", "<C-w>l")
