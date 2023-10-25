@@ -60,14 +60,15 @@ Here are some of the most important Vim motion keybinds that are used in this co
 
 #### Navigation
 
-- `Ctrl + w` + `h`: Move to the window on the left
-- `Ctrl + w` + `l`: Move to the window on the right
-- `Ctrl + w` + `j`: Move to the window below
-- `Ctrl + w` + `k`: Move to the window above
+- `<leader>` + `t`: Move to the window on the left
+- `<leader>` + `y`: Move to the window on the right
+- `<leader>` + `vt`: Move to the window above
+- `<leader>` + `vy`: Move to the window below
+
+
+
 - `Ctrl + o`: Move to the previous cursor position
 - `Ctrl + i`: Move to the next cursor position
-
-
 - `Ctrl + h`: Move to the start of the line
 - `Ctrl + l`: Move to the end of the line
 - `Ctrl + j`: Move to the end of the file
@@ -96,8 +97,10 @@ Here are some of the most important Vim motion keybinds that are used in this co
 
 #### Telescope
 
-- `Ctrl + o`: Open the Telescope prompt to search for all files
-- `Ctrl + p`: Open the Telescope prompt to use live-grep on files
+- `<leader> + o`: Open the Telescope prompt to search for all files
+- `<leader> + p`: Open the Telescope prompt to use live-grep on files
+- `<leader> + so`: Open the Telescope prompt to use search for all files and open them on a split window
+- `<leader> + vso`: Open the Telescope prompt to use search for all files and open them on a vertical split window
    > **Note:** You need to install some dependencies with a package manager such as apt, chocolatey or brew.
    > **Note:** Dependencies are: **fd** and **ripgrep**.
 
@@ -111,7 +114,7 @@ Here are some of the most important Vim motion keybinds that are used in this co
 
 #### Tagbar
 
-- `Ctrl + b`: Toggle tagbar menu
+- `<leader> + b`: Toggle tagbar menu
 
 
 

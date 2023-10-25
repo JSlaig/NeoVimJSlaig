@@ -76,5 +76,8 @@ mapper("x", "<C-h>", "^")
 
 -- Create split
 mapper("n", "<leader>s", ":vsplit<CR>")
-mapper("n", "<leader>m", "<C-w>h")
-mapper("n", "<leader>,", "<C-w>l")
+mapper("n", "<leader>vs", ":split<CR>")
+mapper("n", "<leader>y", "<C-w>l")
+mapper("n", "<leader>t", "<C-w>h")
+mapper("n", "<leader>vt", "<C-w>k")
+mapper("n", "<leader>vy", "<C-w>j")

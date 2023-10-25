@@ -30,6 +30,7 @@ opt.undofile = true
 
 opt.hlsearch = false
 opt.incsearch = true
+opt.ignorecase = true
 
 opt.termguicolors = true
 
