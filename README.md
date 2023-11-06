@@ -49,6 +49,7 @@ This configuration uses the following plugins:
 - [LSP-Zero](https://github.com/creativenull/lsp-zero.nvim): A lightweight Language Server Protocol implementation for Neovim
 - [Dashboard](https://github.com/glepnir/dashboard-nvim): A customizable dashboard for Neovim
 - [Tagbar](https://github.com/majutsushi/tagbar): A sidebar that displays tags generated from source code
+- [ToggleTerm](https://github.com/akinsho/toggleterm): A floating terminal
 
 
 
@@ -115,6 +116,10 @@ Here are some of the most important Vim motion keybinds that are used in this co
 #### Tagbar
 
 - `<leader> + b`: Toggle tagbar menu
+
+#### ToggleTerm
+
+- `<leader> + \`: Toggle floating terminal
 
 
 
