@@ -12,7 +12,7 @@ vim.cmd("set shellquote= shellxquote=")
 -- Initial setup
 toggleterm.setup({
     size = 20,
-    open_mapping = [[<leader>\]],
+    open_mapping = [[<C-\>]],
     hide_numbers = true,
     shade_filetypes = {},
     shade_terminals = true,

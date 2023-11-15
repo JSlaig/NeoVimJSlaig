@@ -119,7 +119,7 @@ Here are some of the most important Vim motion keybinds that are used in this co
 
 #### ToggleTerm
 
-- `<leader> + \`: Toggle floating terminal
+- `Ctrl + \`: Toggle floating terminal
 
 
 

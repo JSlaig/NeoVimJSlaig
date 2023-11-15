@@ -81,7 +81,7 @@ return require('packer').startup(function(use)
   -- File quick navigation 
   use ('theprimeagen/harpoon')
 
-  -- Undo tree (The time you use it works great)
+  -- Undo tree 
   use ('mbbill/undotree')
 
   -- Git integration (Don't really use this, don't really know how to)
@@ -118,11 +118,12 @@ return require('packer').startup(function(use)
   
   -- use 'foo1/bar1.nvim'
   -- use 'foo2/bar2.nvim'
-  -- Automatically set up your configuration after cloning packer.nvim
 
   -- #############################################################################
   -- End my plugins here
   -- #############################################################################
+
+  -- Automatically set up your configuration after cloning packer.nvim
 
   -- Put this at the end after all plugins
   if packer_bootstrap then
