@@ -50,10 +50,10 @@ mapper("x", "<c-i>", ":m '<-2<cr>gv=gv")
 -- ############################################################################
 
 -- "<leader>q" to quit
-mapper("n", "q", ":q!<CR>")
+mapper("n", "<leader>q", ":q!<CR>")
 
 -- "<leader>wq" to save and quit
-mapper("n", "<leader>q", ":wq<CR>")
+mapper("n", "<leader>wq", ":wq<CR>")
 
 -- "<leader>w" to save
 mapper("n", "<leader>w", ":w<CR>")
