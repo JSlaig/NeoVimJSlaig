@@ -31,6 +31,9 @@ This repository contains my configuration files for Neovim, which include my pre
     - Mingw: `choco install mingw`
     > **Note:** Use elevated rights powershell
 
+    - Ctags: `choco install ctags`
+    > **Note:** Almost forgot about this one
+
 ### Linux and macOS
 
 1. Install Neovim using your package manager:
