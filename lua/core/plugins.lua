@@ -85,7 +85,10 @@ return require('packer').startup(function(use)
   use ('mbbill/undotree')
 
   -- Funtion summary
-  use ( 'preservim/tagbar')
+  use ('preservim/tagbar')
+
+  -- Plugin to autopair brackets,...
+  use ('windwp/nvim-autopairs')
 
   -- LSP (To be updated)
   use {
