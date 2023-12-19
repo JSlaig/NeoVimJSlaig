@@ -50,7 +50,7 @@ This configuration uses the following plugins:
 - [Dashboard](https://github.com/glepnir/dashboard-nvim): A customizable dashboard for Neovim
 - [Tagbar](https://github.com/majutsushi/tagbar): A sidebar that displays tags generated from source code
 - [ToggleTerm](https://github.com/akinsho/toggleterm): A floating terminal
-
+- [Vimcaps](https://github.com/suxpert/vimcaps): Remove CapsLock when on normal mode
 
 
 ## Keybinds
@@ -87,6 +87,9 @@ Here are some of the most important Vim motion keybinds that are used in this co
 - `p`: Paste text from system clipboard
 - `r`: To redo changes
 - `u`: To undo changes
+- `<leader>/r`: To quickly enter replace all mode
+    > **Note:** In order to be case sensitive you need to use **/I** after
+    >           **Example**: ":%s/foo/bar/I"
 
 ### Plugin keybinds & functions
 

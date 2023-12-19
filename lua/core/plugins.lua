@@ -84,9 +84,6 @@ return require('packer').startup(function(use)
   -- Undo tree 
   use ('mbbill/undotree')
 
-  -- Git integration (Don't really use this, don't really know how to)
-  use ('tpope/vim-fugitive')
-
   -- Funtion summary
   use ( 'preservim/tagbar')
 
@@ -115,7 +112,10 @@ return require('packer').startup(function(use)
 
   -- ToggleTerm
   use ("akinsho/toggleterm.nvim")
-  
+
+  -- vimcaps (Disable CapsLock on normal mode)
+  use("suxpert/vimcaps")
+
   -- use 'foo1/bar1.nvim'
   -- use 'foo2/bar2.nvim'
 

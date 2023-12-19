@@ -44,6 +44,9 @@ mapper("n", "xx", 'dd')
 mapper("x", "<c-u>", ":m '>+1<cr>gv=gv")
 mapper("x", "<c-i>", ":m '<-2<cr>gv=gv")
 
+-- Command to quickly enter replace mode
+-- SIDENOTE: Use "I" after the replace in order to be case-sensitive
+mapper("n", "<leader>/r", ":%s/")
 
 -- ############################################################################
 -- Mappings for fast moving across the file
