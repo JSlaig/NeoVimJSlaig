@@ -20,7 +20,17 @@ This repository contains my configuration files for Neovim, which include my pre
     
     > **Note:** You may want to compile the plugins using `:PackerSync` command afterwards.
 
+3. Need to install dependencies
     
+    - FD: `winget install sharkdp.fd`
+    > **Note:** If you want to check the right package with winget just use `winget search -q fd`
+    
+    - Ripgrep: `winget install BurntSushi.ripgrep.MSVC`
+    > **Note:** Not sure this is the one, with the same query format from previous one can check the other possible install
+
+    - Mingw: `choco install mingw`
+    > **Note:** Use elevated rights powershell
+
 ### Linux and macOS
 
 1. Install Neovim using your package manager:
