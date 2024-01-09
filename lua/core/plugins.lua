@@ -52,8 +52,6 @@ return require('packer').startup(function(use)
   end,
   requires = {'nvim-tree/nvim-web-devicons'}
   }
-  -- Theme
-  use 'ellisonleao/gruvbox.nvim'
 
   -- For web-dev-icons to work, patched font is needed https://www.nerdfonts.com/
   use 'nvim-tree/nvim-tree.lua'
