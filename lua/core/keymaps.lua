@@ -40,6 +40,11 @@ mapper("n", "cc", 'yy')
 -- Cut a whole line in normal mode by double-tapping "x"
 mapper("n", "xx", 'dd')
 
+-- Make d actually delete
+mapper("n", "dd", '"_dd')
+mapper("n", "d", '"_d')
+mapper("v", "d", '"_d')
+
 -- Command to move highlighted lines
 mapper("x", "<c-u>", ":m '>+1<cr>gv=gv")
 mapper("x", "<c-i>", ":m '<-2<cr>gv=gv")
