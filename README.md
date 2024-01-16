@@ -93,6 +93,8 @@ Here are some of the most important Vim motion keybinds that are used in this co
 
 #### Editing
 
+- `d`: Delete selected text to system clipboard
+- `dd`: Delete whole line
 - `x`: Cut selected text to system clipboard
 - `xx`: Cut selected line to system clipboard
 - `c`: Copy selected text to system clipboard
@@ -114,10 +116,10 @@ Here are some of the most important Vim motion keybinds that are used in this co
 
 #### Telescope
 
-- `<leader> + o`: Open the Telescope prompt to search for all files
-- `<leader> + p`: Open the Telescope prompt to use live-grep on files
-- `<leader> + so`: Open the Telescope prompt to use search for all files and open them on a split window
-- `<leader> + vso`: Open the Telescope prompt to use search for all files and open them on a vertical split window
+- `<leader> + ff`: Open the Telescope prompt to search for all files
+- `<leader> + fg`: Open the Telescope prompt to use live-grep on files
+- `<leader> + sff`: Open the Telescope prompt to use search for all files and open them on a split window
+- `<leader> + vsff`: Open the Telescope prompt to use search for all files and open them on a vertical split window
    > **Note:** You need to install some dependencies with a package manager such as apt, chocolatey or brew.
    > **Note:** Dependencies are: **fd** and **ripgrep**.
 
