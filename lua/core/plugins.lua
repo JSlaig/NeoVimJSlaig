@@ -117,6 +117,14 @@ return require('packer').startup(function(use)
   -- Oil
   use("stevearc/oil.nvim")
 
+  -- Leap
+  use {
+      "ggandor/leap.nvim",
+      requires = 
+      -- For . repeats to work
+      {'tpope/vim-repeat'}
+  }  
+
   -- use 'foo1/bar1.nvim'
   -- use 'foo2/bar2.nvim'
 
