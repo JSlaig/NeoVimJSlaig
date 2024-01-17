@@ -114,6 +114,9 @@ return require('packer').startup(function(use)
   -- vimcaps (Disable CapsLock on normal mode)
   use("suxpert/vimcaps")
 
+  -- Oil
+  use("stevearc/oil.nvim")
+
   -- use 'foo1/bar1.nvim'
   -- use 'foo2/bar2.nvim'
 
