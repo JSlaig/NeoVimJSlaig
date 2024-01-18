@@ -1,7 +1,7 @@
 require("oil").setup({})
 
 local function openHS()
-    vim.cmd("belowright split")
+    vim.cmd("above split")
     vim.cmd("resize 20%")
 
     require("oil").open()
