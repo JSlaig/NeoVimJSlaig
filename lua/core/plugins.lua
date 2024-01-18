@@ -36,13 +36,13 @@ return require('packer').startup(function(use)
           icon_hl = '@variable',
           desc = 'Files',
           group = 'Label',
-          action = 'Telescope find_files',
+          action = ':Files',
           key = 'f',
         },
         {
           desc = ' ColorScheme',
           group = 'Personalize',
-          action = 'color',
+          action = ':Color',
          key = 'a',
         },
       },
@@ -52,6 +52,9 @@ return require('packer').startup(function(use)
   end,
   requires = {'nvim-tree/nvim-web-devicons'}
   }
+
+  -- Needed both in harpoon and fuzzy finders
+  use 'nvim-lua/plenary.nvim'
 
   -- For web-dev-icons to work, patched font is needed https://www.nerdfonts.com/
   use 'nvim-tree/nvim-tree.lua'
@@ -64,11 +67,16 @@ return require('packer').startup(function(use)
   use 'nvim-treesitter/playground'
 
   -- Fuzzy finder
-  use {
-    'nvim-telescope/telescope.nvim',
-    tag = '0.1.0',
-    requires = { {'nvim-lua/plenary.nvim'} }
-  }
+  -- use {
+  --   'nvim-telescope/telescope.nvim',
+  --   tag = '0.1.0',
+  --   requires = { {'nvim-lua/plenary.nvim'} }
+  -- }
+
+  use { "junegunn/fzf"}
+  use { "junegunn/fzf.vim"}
+  use 'vijaymarupudi/nvim-fzf'
+  use 'vijaymarupudi/nvim-fzf-commands'
   
   -- Ez comment lines
   use 'tpope/vim-commentary'
@@ -77,7 +85,9 @@ return require('packer').startup(function(use)
   use('ThePrimeagen/vim-be-good') 
 
   -- File quick navigation 
-  use ('theprimeagen/harpoon')
+  use {'theprimeagen/harpoon',
+        requires = {'nvim-lua/plenary.nvim'}
+    }
 
   -- Undo tree 
   use ('mbbill/undotree')
