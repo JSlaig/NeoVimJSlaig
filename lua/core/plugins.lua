@@ -135,6 +135,9 @@ return require('packer').startup(function(use)
       {'tpope/vim-repeat'}
   }  
 
+  -- Github copilot
+  use("github/copilot.vim")
+
   -- use 'foo1/bar1.nvim'
   -- use 'foo2/bar2.nvim'
 
