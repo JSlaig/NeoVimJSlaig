@@ -1,5 +1,3 @@
 
 
-
--- Copilot panel binding
-vim.keymap.set('n', '<leader>cop', ":Copilot<CR>")  
+vim.keymap.set('n', '<leader>co', ":Copilot<CR>")  
