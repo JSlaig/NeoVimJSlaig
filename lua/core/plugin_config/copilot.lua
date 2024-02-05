@@ -1,3 +1,4 @@
+vim.keymap.set('n', '<leader>cop', ":Copilot panel<CR>")  
 
-
-vim.keymap.set('n', '<leader>co', ":Copilot<CR>")  
+-- Still need to config specific functions such as chat, selected text, input 
+-- based suggestiohns, etc.

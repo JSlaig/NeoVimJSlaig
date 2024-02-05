@@ -138,6 +138,21 @@ return require('packer').startup(function(use)
   -- Github copilot
   use("github/copilot.vim")
 
+  -- Need this to make tasks work with json files with comments/trailing commas
+  -- use{
+  --     'Joakker/lua-json5',
+  --     run = 'powershell ./install.ps1'
+  -- }
+  -- Run VSCode tasks inside NeoVim
+    use {
+        'EthanJWright/vs-tasks.nvim',
+        requires = {
+            'nvim-lua/plenary.nvim',
+            'nvim-lua/popup.nvim',
+            'nvim-telescope/telescope.nvim'
+        }
+    }
+
   -- use 'foo1/bar1.nvim'
   -- use 'foo2/bar2.nvim'
 
