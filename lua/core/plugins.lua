@@ -89,6 +89,9 @@ return require('packer').startup(function(use)
         requires = {'nvim-lua/plenary.nvim'}
     }
 
+  -- Harpoon like buffer manager
+  use 'j-morano/buffer_manager.nvim'
+
   -- Undo tree 
   use ('mbbill/undotree')
 
