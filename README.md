@@ -64,6 +64,9 @@ This configuration uses the following plugins:
 - [Tagbar](https://github.com/majutsushi/tagbar): A sidebar that displays tags generated from source code
 - [ToggleTerm](https://github.com/akinsho/toggleterm): A floating terminal
 - [Vimcaps](https://github.com/suxpert/vimcaps): Remove CapsLock when on normal mode
+- [Leap](https://github.com/rubberydub/leap.vim): A visual mode motion plugin
+- [Oil](https://github.com/getzola/oil.nvim): A file explorer as a buffer
+- [Vs Tasks](https://github.com/lfv89/vs-tasks.nvim): Run visual studio tasks.json files
 
 
 ## Keybinds
