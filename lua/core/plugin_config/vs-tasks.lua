@@ -23,6 +23,6 @@ require("vstask").setup({
 })
 
 -- Binding to list and run available tasks
-vim.keymap.set('n', '<leader>ta', ":lua require('telescope').extensions.vstask.tasks()<CR>")  
+vim.keymap.set('n', '<leader>bt', ":lua require('telescope').extensions.vstask.tasks()<CR>")  
 
 

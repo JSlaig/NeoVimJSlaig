@@ -114,12 +114,12 @@ Here are some of the most important Vim motion keybinds that are used in this co
 - `:TSPlaygroundToggle`: Toggle the Treesitter Playground
 - `:TSHighlightCapturesUnderCursor`: Show the syntax highlighting groups for the text under the cursor
 
-#### Telescope
+#### Fzf
 
 - `<leader> + ff`: Open the Telescope prompt to search for all files
 - `<leader> + fg`: Open the Telescope prompt to use live-grep on files
 - `<leader> + sff`: Open the Telescope prompt to use search for all files and open them on a split window
-- `<leader> + vsff`: Open the Telescope prompt to use search for all files and open them on a vertical split window
+- `<leader> + sfg`: Open the Telescope prompt to use live-grep on files and open them on a split window
    > **Note:** You need to install some dependencies with a package manager such as apt, chocolatey or brew.
    > **Note:** Dependencies are: **fd** and **ripgrep**.
 
@@ -131,9 +131,27 @@ Here are some of the most important Vim motion keybinds that are used in this co
 - `<leader> + k`: Navigate to previous "Harpooned" file
 - `<leader> + 1-4`: Navigate to the "n Harpooned" file
 
+#### Buffer Manager
+
+- `<leader> + buf`: Toggle Buffer Manager menu
+
+#### Vs Tasks
+
+- `<leader> + bt`: Open menu to read and run .vscode/tasks.json
+  > **Note:** This is a plugin that lets you run visual studio config fileso
+  
 #### Tagbar
 
-- `<leader> + b`: Toggle tagbar menu
+- `<leader> + gb`: Toggle tagbar menu
+
+#### Leap
+- `s`: Forward search
+- `m`: Backward search
+  >**Note:** Real fun to use this to be honest
+
+#### Oil
+- `<leader>oil`: Open oil menu
+  >**Note:** File manager as buffer
 
 #### ToggleTerm
 
