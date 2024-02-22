@@ -139,7 +139,7 @@ return require('packer').startup(function(use)
   }  
 
   -- Github copilot
-  use("github/copilot.vim")
+  -- use("github/copilot.vim")
 
   -- Run VSCode tasks inside NeoVim
     use {

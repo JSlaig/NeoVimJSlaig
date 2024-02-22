@@ -2,7 +2,7 @@ require("vstask").setup({
   cache_json_conf = false, -- don't read the json conf every time a task is ran
   cache_strategy = "most", -- can be "most" or "last" (most used / last used)
   config_dir = ".vscode", -- directory to look for tasks.json and launch.json
-  use_harpoon = true, -- use harpoon to auto cache terminals
+  use_harpoon = true, -- Need this in order for terms to appear in buffers and be able to retrieve them
   telescope_keys = { -- change the telescope bindings used to launch tasks
       tab = '<CR>',
       -- current = '<CR>',
