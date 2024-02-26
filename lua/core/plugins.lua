@@ -17,6 +17,9 @@ return require('packer').startup(function(use)
   -- #############################################################################
   -- My plugins here
   -- #############################################################################
+  
+  --Custom colorschemes
+  use { "catppuccin/nvim", as = "catppuccin" }
 
   -- Dashboard mainscreen
   use {
