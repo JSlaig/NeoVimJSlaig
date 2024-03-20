@@ -1,3 +1,5 @@
+vim.notify = require("notify")
+
 require("core.plugin_config.lualine")
 require("core.plugin_config.nvim-tree")
 require("core.plugin_config.treesitter")
@@ -11,3 +13,7 @@ require("core.plugin_config.leap")
 require("core.plugin_config.fzf")
 require("core.plugin_config.vs-tasks")
 require("core.plugin_config.buffer-manager")
+require("core.plugin_config.nvim-early-retirement")
+require("core.plugin_config.nvim-notify")
+
+vim.notify("All plugins loaded succesfully", "info")

@@ -146,6 +146,7 @@ return require('packer').startup(function(use)
 
   -- Run VSCode tasks inside NeoVim
     use {
+        -- Still need to tinker this so I can run multiple
         'EthanJWright/vs-tasks.nvim',
         requires = {
             'nvim-lua/plenary.nvim',
@@ -153,6 +154,12 @@ return require('packer').startup(function(use)
             'nvim-telescope/telescope.nvim'
         }
     }
+
+  -- Autoclose inactive buffers
+  use 'chrisgrieser/nvim-early-retirement'
+
+  -- Notifications
+  use 'rcarriga/nvim-notify'
 
   -- use 'foo1/bar1.nvim'
   -- use 'foo2/bar2.nvim'
