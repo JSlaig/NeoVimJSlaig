@@ -58,7 +58,6 @@ This configuration uses the following plugins:
 - [Telescope](https://github.com/nvim-telescope/telescope.nvim): A highly extensible fuzzy finder for Vim
 - [Harpoon](https://github.com/ThePrimeagen/harpoon): A set of keybindings to help navigate between files
 - [Undotree](https://github.com/mbbill/undotree): A visualizer for undo history tree
-- [Fugitive](https://github.com/tpope/vim-fugitive): A Git wrapper for Vim
 - [LSP-Zero](https://github.com/creativenull/lsp-zero.nvim): A lightweight Language Server Protocol implementation for Neovim
 - [Dashboard](https://github.com/glepnir/dashboard-nvim): A customizable dashboard for Neovim
 - [Tagbar](https://github.com/majutsushi/tagbar): A sidebar that displays tags generated from source code
