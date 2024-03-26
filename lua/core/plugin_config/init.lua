@@ -1,21 +1,34 @@
 vim.notify = require("notify")
 
-require("core.plugin_config.lualine")
-require("core.plugin_config.nvim-tree")
-require("core.plugin_config.treesitter")
-require("core.plugin_config.tagbar")
-require("core.plugin_config.toggleterm")
--- require("core.plugin_config.completions")
--- require("core.plugin_config.autopairs")
-require("core.plugin_config.oil")
-require("core.plugin_config.leap")
--- require("core.plugin_config.telescope")
-require("core.plugin_config.fzf")
-require("core.plugin_config.vs-tasks")
-require("core.plugin_config.buffer-manager")
-require("core.plugin_config.nvim-early-retirement")
-require("core.plugin_config.nvim-notify")
-require("core.plugin_config.formatting")
-require("core.plugin_config.linting")
+
+-- Appearance plugins config files
+require("core.plugin_config.appearance.lualine")
+require("core.plugin_config.appearance.nvim-notify")
+
+-- Navigation plugins config files
+require("core.plugin_config.navigation.nvim-tree")
+require("core.plugin_config.navigation.fzf")
+-- require("core.plugin_config.navigation.telescope")
+require("core.plugin_config.navigation.harpoon")
+require("core.plugin_config.navigation.leap")
+
+-- IDE plugins config files
+require("core.plugin_config.ide.mason")
+require("core.plugin_config.ide.treesitter")
+require("core.plugin_config.ide.linter")
+require("core.plugin_config.ide.formatter")
+-- require("core.plugin_config.ide.completions")
+-- require("core.plugin_config.ide.autopairs")
+
+-- Tool plugins config files
+require("core.plugin_config.tools.buffer-manager")
+require("core.plugin_config.tools.nvim-early-retirement")
+require("core.plugin_config.tools.tagbar")
+require("core.plugin_config.tools.undotree")
+require("core.plugin_config.tools.toggleterm")
+require("core.plugin_config.tools.vs-tasks")
+
+
+
 
 vim.notify("All plugins loaded succesfully", "info")

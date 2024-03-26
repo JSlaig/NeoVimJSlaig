@@ -24,5 +24,10 @@ vim.keymap.set({ "n", "v" }, "<leader>fw", function()
 		lsp_fallback = true,
 		async = false,
 		timeout_ms = 1000,
+		options = {
+			indent_size = 3,
+			single_quote = false,
+			trailing_comma = "none",
+		},
 	})
 end)

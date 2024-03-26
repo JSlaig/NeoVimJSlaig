@@ -107,9 +107,6 @@ return require("packer").startup(function(use)
 	-- vimcaps (Disable CapsLock on normal mode)
 	use("suxpert/vimcaps")
 
-	-- Oil
-	use("stevearc/oil.nvim")
-
 	-- Leap
 	use({
 		"ggandor/leap.nvim",
