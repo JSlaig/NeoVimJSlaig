@@ -19,6 +19,7 @@ vim.opt.shiftwidth = 2
 vim.opt.shiftround = true
 vim.opt.expandtab = true
 
+
 -- ############################################################################
 -- Mappings for quick editing the file
 -- ############################################################################
@@ -37,6 +38,7 @@ mapper("x", "x", '"+d')
 
 -- Copy a whole line in normal mode by double-tapping "c"
 mapper("n", "cc", 'yy')
+
 -- Cut a whole line in normal mode by double-tapping "x"
 mapper("n", "xx", 'dd')
 
@@ -46,12 +48,13 @@ mapper("n", "d", '"_d')
 mapper("v", "d", '"_d')
 
 -- Command to move highlighted lines
-mapper("x", "<c-u>", ":m '>+1<cr>gv=gv")
-mapper("x", "<c-i>", ":m '<-2<cr>gv=gv")
+mapper("x", "<c-j>", ":m '>+1<cr>gv=gv")
+mapper("x", "<c-k>", ":m '<-2<cr>gv=gv")
 
 -- Command to quickly enter replace mode
 -- SIDENOTE: Use "I" after the replace in order to be case-sensitive
 mapper("n", "<leader>/r", ":%s/")
+
 
 -- ############################################################################
 -- Mappings for fast moving across the file
@@ -66,14 +69,6 @@ mapper("n", "<leader>wq", ":wq<CR>")
 -- "<leader>w" to save
 mapper("n", "<leader>w", ":w<CR>")
 
--- Go to the end of the file with Ctrl + J
-mapper("n", "<C-j>", "]]")
-mapper("x", "<C-j>", "]]")
-
--- Go to the start of the file with Ctrl + K
-mapper("n", "<C-k>", "[[")
-mapper("x", "<C-k>", "[[")
-
 -- Go to the end of the line with Ctrl + L
 mapper("n", "<C-l>", "$")
 mapper("x", "<C-l>", "$")
@@ -85,6 +80,8 @@ mapper("x", "<C-h>", "^")
 -- Create split
 mapper("n", "<leader>s", ":vsplit<CR>")
 mapper("n", "<leader>vs", ":split<CR>")
+
+-- Move across splits
 mapper("n", "<leader>y", "<C-w>l")
 mapper("n", "<leader>t", "<C-w>h")
 mapper("n", "<leader>vk", "<C-w>k")

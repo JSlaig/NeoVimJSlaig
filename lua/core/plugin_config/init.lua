@@ -23,7 +23,6 @@ require("core.plugin_config.ide.formatter")
 -- Tool plugins config files
 require("core.plugin_config.tools.buffer-manager")
 require("core.plugin_config.tools.nvim-early-retirement")
-require("core.plugin_config.tools.tagbar")
 require("core.plugin_config.tools.undotree")
 require("core.plugin_config.tools.toggleterm")
 require("core.plugin_config.tools.vs-tasks")

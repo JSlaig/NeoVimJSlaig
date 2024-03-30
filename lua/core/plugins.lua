@@ -18,134 +18,148 @@ return require("packer").startup(function(use)
 	-- My plugins here
 	-- #############################################################################
 
-	--Custom colorschemes
+  -- Needed both in harpoon and fuzzy finders
+  use("nvim-lua/plenary.nvim")
+
+  -- For web-dev-icons to work, patched font is needed https://www.nerdfonts.com/
+  use("nvim-tree/nvim-web-devicons")
+  
+  -- #############################################################################
+  -- ## Appearance
+  -- #############################################################################
+
+  -- Dashboard for mainscreen
+  use({
+    "glepnir/dashboard-nvim",
+    event = "VimEnter",
+    config = function()
+      require("dashboard").setup({
+        -- config
+        theme = "hyper",
+        config = {
+          week_header = {
+            enable = true,
+          },
+          shortcut = {
+            {
+              icon = " ",
+              icon_hl = "@variable",
+              desc = "Files",
+              group = "Label",
+              action = ":Files",
+              key = "f",
+            },
+            {
+              desc = " ColorScheme",
+              group = "Personalize",
+              action = ":Color",
+              key = "a",
+            },
+          },
+        },
+      })
+    end,
+    requires = { "nvim-tree/nvim-web-devicons" },
+  })
+
+  -- Status bar
+  use("nvim-lualine/lualine.nvim")
+  
+  -- Notifications
+  use("rcarriga/nvim-notify")
+
+	-- Custom colorschemes
 	use({ "catppuccin/nvim", as = "catppuccin" })
 
-	-- Dashboard mainscreen
-	use({
-		"glepnir/dashboard-nvim",
-		event = "VimEnter",
-		config = function()
-			require("dashboard").setup({
-				-- config
-				theme = "hyper",
-				config = {
-					week_header = {
-						enable = true,
-					},
-					shortcut = {
-						{
-							icon = " ",
-							icon_hl = "@variable",
-							desc = "Files",
-							group = "Label",
-							action = ":Files",
-							key = "f",
-						},
-						{
-							desc = " ColorScheme",
-							group = "Personalize",
-							action = ":Color",
-							key = "a",
-						},
-					},
-				},
-			})
-		end,
-		requires = { "nvim-tree/nvim-web-devicons" },
-	})
 
-	-- Needed both in harpoon and fuzzy finders
-	use("nvim-lua/plenary.nvim")
+  -- #############################################################################
+	-- ## IDE
+  -- #############################################################################
+  
+  -- Syntax highlighting
+  use("nvim-treesitter/nvim-treesitter")
+  use("nvim-treesitter/playground")
 
-	-- For web-dev-icons to work, patched font is needed https://www.nerdfonts.com/
+  -- LSP Config
+  use("williamboman/mason.nvim")
+  use("williamboman/mason-lspconfig.nvim")
+
+  -- Plugin to autopair brackets,...
+  use("windwp/nvim-autopairs")
+
+  -- Formatter
+  use("stevearc/conform.nvim")
+
+  -- Linter
+  use("mfussenegger/nvim-lint")
+
+
+  -- #############################################################################
+	-- ## Navigation
+  -- #############################################################################
+
+  -- Fuzzy finder
+  -- use {
+    --   'nvim-telescope/telescope.nvim',
+    --   tag = '0.1.0',
+    --   requires = { {'nvim-lua/plenary.nvim'} }
+    -- }
+
+  use({ "junegunn/fzf" })
+  use({ "junegunn/fzf.vim" })
+  use("vijaymarupudi/nvim-fzf")
+  use("vijaymarupudi/nvim-fzf-commands")
+
+  -- File quick navigation
+  use({ "theprimeagen/harpoon", requires = { "nvim-lua/plenary.nvim" } })
+
+  -- In-File quick navigation
+  use({
+    "ggandor/leap.nvim",
+    -- For . repeats to work
+    requires = { "tpope/vim-repeat" },
+  })
+
+  -- File tree
 	use("nvim-tree/nvim-tree.lua")
-	use("nvim-tree/nvim-web-devicons")
 
-	use("nvim-lualine/lualine.nvim")
 
-	-- Syntax highlighting
-	use("nvim-treesitter/nvim-treesitter")
-	use("nvim-treesitter/playground")
+  -- #############################################################################
+  -- ## Tools
+  -- #############################################################################
+  
+  -- Run VSCode tasks inside NeoVim
+  use({
+    -- Still need to tinker this so I can run multiple
+    "EthanJWright/vs-tasks.nvim",
+    requires = {
+      "nvim-lua/plenary.nvim",
+      "nvim-lua/popup.nvim",
+      "nvim-telescope/telescope.nvim",
+    },
+  })
 
-	-- Fuzzy finder
-	-- use {
-	--   'nvim-telescope/telescope.nvim',
-	--   tag = '0.1.0',
-	--   requires = { {'nvim-lua/plenary.nvim'} }
-	-- }
+  -- ToggleTerm
+  use("akinsho/toggleterm.nvim")
 
-	use({ "junegunn/fzf" })
-	use({ "junegunn/fzf.vim" })
-	use("vijaymarupudi/nvim-fzf")
-	use("vijaymarupudi/nvim-fzf-commands")
+  -- Buffer manager
+  use("j-morano/buffer_manager.nvim")
+
+  -- Undo tree
+  use("mbbill/undotree")
 
 	-- Ez comment lines
 	use("tpope/vim-commentary")
 
-	-- Game to learn VIM Motions
-	use("ThePrimeagen/vim-be-good")
-
-	-- File quick navigation
-	use({ "theprimeagen/harpoon", requires = { "nvim-lua/plenary.nvim" } })
-
-	-- Harpoon like buffer manager
-	use("j-morano/buffer_manager.nvim")
-
-	-- Undo tree
-	use("mbbill/undotree")
-
-	-- Funtion summary
-	use("preservim/tagbar")
-
-	-- Plugin to autopair brackets,...
-	use("windwp/nvim-autopairs")
-
-	-- ToggleTerm
-	use("akinsho/toggleterm.nvim")
-
 	-- vimcaps (Disable CapsLock on normal mode)
 	use("suxpert/vimcaps")
 
-	-- Leap
-	use({
-		"ggandor/leap.nvim",
-		-- For . repeats to work
-		requires = { "tpope/vim-repeat" },
-	})
-
-	-- Github copilot
-	-- use("github/copilot.vim")
-
-	-- Run VSCode tasks inside NeoVim
-	use({
-		-- Still need to tinker this so I can run multiple
-		"EthanJWright/vs-tasks.nvim",
-		requires = {
-			"nvim-lua/plenary.nvim",
-			"nvim-lua/popup.nvim",
-			"nvim-telescope/telescope.nvim",
-		},
-	})
 
 	-- Autoclose inactive buffers
 	use("chrisgrieser/nvim-early-retirement")
 
-	-- Notifications
-	use("rcarriga/nvim-notify")
-
-	-- LSP Config
-	use("williamboman/mason.nvim")
-	use("williamboman/mason-lspconfig.nvim")
-
-	-- Formatter
-	use("stevearc/conform.nvim")
-
-	-- Linter
-	use("mfussenegger/nvim-lint")
-
-	-- use 'foo1/bar1.nvim'
-	-- use 'foo2/bar2.nvim'
+  -- Game to learn VIM Motions
+  use("ThePrimeagen/vim-be-good")
 
 	-- #############################################################################
 	-- End my plugins here
