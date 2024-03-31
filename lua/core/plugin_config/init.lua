@@ -7,8 +7,8 @@ require("core.plugin_config.appearance.nvim-notify")
 
 -- Navigation plugins config files
 require("core.plugin_config.navigation.nvim-tree")
-require("core.plugin_config.navigation.fzf")
--- require("core.plugin_config.navigation.telescope")
+-- require("core.plugin_config.navigation.fzf")
+require("core.plugin_config.navigation.telescope")
 require("core.plugin_config.navigation.harpoon")
 require("core.plugin_config.navigation.leap")
 
