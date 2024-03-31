@@ -24,6 +24,9 @@ vim.opt.expandtab = true
 -- Mappings for quick editing the file
 -- ############################################################################
 
+-- Remove F1 mapping for help
+mapper("", "<F1>", "<Nop>")
+
 -- "r" to re-do
 mapper("n", "r", "<C-r>")
 

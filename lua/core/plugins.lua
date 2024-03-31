@@ -85,6 +85,10 @@ return require("packer").startup(function(use)
   -- LSP Config
   use("williamboman/mason.nvim")
   use("williamboman/mason-lspconfig.nvim")
+  use({"neovim/nvim-lspconfig", requires = {
+    "hrsh7th/cmp-nvim-lsp",
+    "antosha417/nvim-lsp-file-operations"
+  }})
 
   -- Autocompletion
   use({
