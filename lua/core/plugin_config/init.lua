@@ -17,7 +17,7 @@ require("core.plugin_config.ide.mason")
 require("core.plugin_config.ide.treesitter")
 require("core.plugin_config.ide.linter")
 require("core.plugin_config.ide.formatter")
--- require("core.plugin_config.ide.completions")
+require("core.plugin_config.ide.completions")
 -- require("core.plugin_config.ide.autopairs")
 
 -- Tool plugins config files

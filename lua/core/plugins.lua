@@ -86,6 +86,18 @@ return require("packer").startup(function(use)
   use("williamboman/mason.nvim")
   use("williamboman/mason-lspconfig.nvim")
 
+  -- Autocompletion
+  use({
+    "hrsh7th/nvim-cmp", 
+    requires = {
+      "hrsh7th/cmp-buffer",
+      "hrsh7th/cmp-path",
+      "L3MON4D3/LuaSnip",
+      "saadparwaiz1/cmp_luasnip",
+      "rafamadriz/friendly-snippets"
+    }
+  })
+
   -- Plugin to autopair brackets,...
   use("windwp/nvim-autopairs")
 
