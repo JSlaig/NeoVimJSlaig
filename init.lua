@@ -1,15 +1,21 @@
 -- Core editor settings file
-require("core.set")
+require("set")
 
 -- Core editor keymaps file
-require("core.keymaps")
+require("keymaps")
 
--- Plugin manager core file
-require("core.plugins")
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not (vim.uv or vim.loop).fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
 
--- Folder for plugin specific configs
-require("core.plugin_config")
-
--- Optional file that can be created to create scheduled tasks
--- require("core.autocmd")
+return require("lazy").setup('plugins') 
 
