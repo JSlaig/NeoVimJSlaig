@@ -1,5 +1,5 @@
 return {
-  "ThePrimeagen/harpoon",
+  "ThePrimeagen/harpoon", -- fav files quick nav
   dependencies = {
     "nvim-lua/plenary.nvim",
   },

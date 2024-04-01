@@ -1,3 +1,3 @@
 return {
-  "catppuccin/nvim", as = "catppuccin"
+  "catppuccin/nvim", as = "catppuccin" -- Theme
 }

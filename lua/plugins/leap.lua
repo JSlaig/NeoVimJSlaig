@@ -1,5 +1,5 @@
 return {
-  "ggandor/leap.nvim",
+  "ggandor/leap.nvim", -- InFile quick nav
   dependencies = {
     "tpope/vim-repeat",
   },

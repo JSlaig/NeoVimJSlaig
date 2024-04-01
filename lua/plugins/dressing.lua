@@ -1,3 +1,3 @@
 return { 
-  'stevearc/dressing.nvim'
+  'stevearc/dressing.nvim' -- Better ui for choices and user input
 }
