@@ -81,6 +81,7 @@ return require("packer").startup(function(use)
   -- Syntax highlighting
   use("nvim-treesitter/nvim-treesitter")
   use("nvim-treesitter/playground")
+  use("David-Kunz/markid") -- Better syntax highlighting
 
   -- LSP Config
   use("williamboman/mason.nvim")
@@ -171,7 +172,6 @@ return require("packer").startup(function(use)
 
 	-- vimcaps (Disable CapsLock on normal mode)
 	use("suxpert/vimcaps")
-
 
 	-- Autoclose inactive buffers
 	use("chrisgrieser/nvim-early-retirement")
