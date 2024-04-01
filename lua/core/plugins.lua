@@ -1,35 +1,33 @@
-local ensure_packer = function()
-	local fn = vim.fn
-	local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
-	if fn.empty(fn.glob(install_path)) > 0 then
-		fn.system({ "git", "clone", "--depth", "1", "https://github.com/wbthomason/packer.nvim", install_path })
-		vim.cmd([[packadd packer.nvim]])
-		return true
-	end
-	return false
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not (vim.uv or vim.loop).fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
 end
+vim.opt.rtp:prepend(lazypath)
 
-local packer_bootstrap = ensure_packer()
-
-return require("packer").startup(function(use)
-	use("wbthomason/packer.nvim")
-
+return require("lazy").setup({
 	-- ##########################################################################
 	-- My plugins here
 	-- ##########################################################################
 
   -- Needed both in harpoon and fuzzy finders
-  use("nvim-lua/plenary.nvim")
+  'nvim-lua/plenary.nvim',
 
   -- Need a nerdfont in your terminal for this to display correctly
-  use("nvim-tree/nvim-web-devicons")
+  'nvim-tree/nvim-web-devicons',
   
   -- ##########################################################################
   -- ## Appearance
   -- ##########################################################################
 
   -- Dashboard for mainscreen
-  use({
+  {
     "glepnir/dashboard-nvim",
     event = "VimEnter",
     config = function()
@@ -59,58 +57,57 @@ return require("packer").startup(function(use)
         },
       })
     end,
-    requires = { "nvim-tree/nvim-web-devicons" },
-  })
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+  },
 
   -- Status bar
-  use("nvim-lualine/lualine.nvim")
+  'nvim-lualine/lualine.nvim',
   
   -- Notifications
-  use("rcarriga/nvim-notify")
+  'rcarriga/nvim-notify',
 
 	-- Custom colorschemes
-	use({ "catppuccin/nvim", as = "catppuccin" })
+	{ "catppuccin/nvim", as = "catppuccin" },
 
   -- Plugin to manage user input and selections (vim.ui.select)
-  use("stevearc/dressing.nvim")
+  'stevearc/dressing.nvim',
 
   -- ##########################################################################
 	-- ## IDE
   -- ##########################################################################
   
   -- Syntax highlighting
-  use("nvim-treesitter/nvim-treesitter")
-  use("nvim-treesitter/playground")
-  use("David-Kunz/markid") -- Better syntax highlighting
+  'nvim-treesitter/nvim-treesitter',
+  'nvim-treesitter/playground',
 
   -- LSP Config
-  use("williamboman/mason.nvim")
-  use("williamboman/mason-lspconfig.nvim")
-  use({"neovim/nvim-lspconfig", requires = {
+  'williamboman/mason.nvim',
+  'williamboman/mason-lspconfig.nvim',
+  {"neovim/nvim-lspconfig", dependencies = {
     "hrsh7th/cmp-nvim-lsp",
     "antosha417/nvim-lsp-file-operations"
-  }})
+  }},
 
   -- Autocompletion
-  use({
+  {
     "hrsh7th/nvim-cmp", 
-    requires = {
+    dependencies = {
       "hrsh7th/cmp-buffer",
       "hrsh7th/cmp-path",
       "L3MON4D3/LuaSnip",
       "saadparwaiz1/cmp_luasnip",
       "rafamadriz/friendly-snippets"
     }
-  })
+  },
 
   -- Plugin to autopair brackets,...
-  use("windwp/nvim-autopairs")
+  'windwp/nvim-autopairs',
 
   -- Formatter
-  use("stevearc/conform.nvim")
+  'stevearc/conform.nvim',
 
   -- Linter
-  use("mfussenegger/nvim-lint")
+  'mfussenegger/nvim-lint',
 
 
   -- ##########################################################################
@@ -121,63 +118,64 @@ return require("packer").startup(function(use)
   -- use {
     --   'nvim-telescope/telescope.nvim',
     --   tag = '0.1.0',
-    --   requires = { {'nvim-lua/plenary.nvim'} }
+    --   dependencies = { {'nvim-lua/plenary.nvim'} }
     -- }
 
-  use({ "junegunn/fzf" })
-  use({ "junegunn/fzf.vim" })
-  use("vijaymarupudi/nvim-fzf")
-  use("vijaymarupudi/nvim-fzf-commands")
+  'junegunn/fzf',
+  'junegunn/fzf.vim',
+  'vijaymarupudi/nvim-fzf',
+  'vijaymarupudi/nvim-fzf-commands',
 
   -- File quick navigation
-  use({ "theprimeagen/harpoon", requires = { "nvim-lua/plenary.nvim" } })
+  { "theprimeagen/harpoon", dependencies = { "nvim-lua/plenary.nvim" } },
 
   -- In-File quick navigation
-  use({
+  {
     "ggandor/leap.nvim",
     -- For . repeats to work
-    requires = { "tpope/vim-repeat" },
-  })
+    dependencies = { "tpope/vim-repeat" },
+  },
 
   -- File tree
-	use("nvim-tree/nvim-tree.lua")
+	'nvim-tree/nvim-tree.lua',
 
 
   -- ##########################################################################
   -- ## Tools
   -- ##########################################################################
   
-  -- Run VSCode tasks inside NeoVim
-  use({
-    -- Still need to tinker this so I can run multiple
+  -- build VSCode tasks inside NeoVim
+  {
+    -- Still need to tinker this so I can build multiple
     "EthanJWright/vs-tasks.nvim",
-    requires = {
+    dependencies = {
       "nvim-lua/plenary.nvim",
       "nvim-lua/popup.nvim",
       "nvim-telescope/telescope.nvim",
     },
-  })
+  },
 
   -- ToggleTerm
-  use("akinsho/toggleterm.nvim")
+  'akinsho/toggleterm.nvim',
 
   -- Buffer manager
-  use("j-morano/buffer_manager.nvim")
+  'j-morano/buffer_manager.nvim',
 
   -- Undo tree
-  use("mbbill/undotree")
+  'mbbill/undotree',
 
 	-- Ez comment lines
-	use("tpope/vim-commentary")
+	'tpope/vim-commentary',
 
 	-- vimcaps (Disable CapsLock on normal mode)
-	use("suxpert/vimcaps")
+  'suxpert/vimcaps',
+
 
 	-- Autoclose inactive buffers
-	use("chrisgrieser/nvim-early-retirement")
+	'chrisgrieser/nvim-early-retirement',
 
   -- Game to learn VIM Motions
-  use("ThePrimeagen/vim-be-good")
+  'ThePrimeagen/vim-be-good',
 
 	-- ##########################################################################
 	-- End my plugins here
@@ -186,7 +184,4 @@ return require("packer").startup(function(use)
 	-- Automatically set up your configuration after cloning packer.nvim
 
 	-- Put this at the end after all plugins
-	if packer_bootstrap then
-		require("packer").sync()
-	end
-end)
+	})
