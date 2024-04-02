@@ -12,10 +12,10 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-    { import = "jslaig.plugins" },
-    { import = "jslaig.plugins.appearance" }, 
-    { import = "jslaig.plugins.navigation" }, 
-    { import = "jslaig.plugins.tools" },
+    { import = "jslaig.plugins" }, -- Uncategorized plugins
+    { import = "jslaig.plugins.appearance" }, -- Plugins that manage dialogs, colors, etc
+    { import = "jslaig.plugins.navigation" }, -- Plugins to ease navigation in and between files
+    { import = "jslaig.plugins.tools" }, -- Additional tools
     -- { import = "jslaig.plugins.ide" },
   checker = {
     enabled = true,
