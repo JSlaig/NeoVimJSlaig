@@ -1,12 +1,46 @@
-require 'nvim-treesitter.configs'.setup {
-  -- A list of parser names, or "all"
-  ensure_installed = { "c", "lua", "vim", "python", "javascript", "html", "css", "regex", "vimdoc"}, 
-  
-  -- Install parsers synchronously (only applied to `ensure_installed`)
-  sync_install = false,
-  auto_install = true,
-  highlight = {
-    enable = true,
-    disable = { "vimdoc" },
-  },
+return {
+    "nvim-treesitter/nvim-treesitter",
+    build = ":TSUpdate",
+    event = { "BufReadPre", "BufNewFile" },
+    config = function()
+        local treesitter = require("nvim-treesitter.configs")
+
+        treesitter.setup({
+            highlight = {
+                enable = true,
+                disable = { "vimdoc" },
+            },
+            indent = {
+                enable = true,
+            },
+            ensure_installed = {
+                "json",
+                "javascript",
+                "java",
+                "yaml",
+                "html",
+                "css",
+                "markdown",
+                "markdown_inline",
+                "bash", 
+                "lua",
+                "vim",
+                "dockerfile",
+                "gitignore",
+                "python",
+                "regex",
+                "vimdoc",
+                "c"
+            },
+            incremental_selection = {
+                enable = true,
+                keymaps = {
+                    init_selection = "<C-s>",
+                    node_incremental = "<C-s>",
+                    scope_incremental = false,
+                    node_decremental = "<bs>",
+                }
+            }
+        })
+    end,
 }

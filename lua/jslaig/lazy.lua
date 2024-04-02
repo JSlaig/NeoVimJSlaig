@@ -16,7 +16,7 @@ require("lazy").setup({
     { import = "jslaig.plugins.appearance" }, -- Plugins that manage dialogs, colors, etc
     { import = "jslaig.plugins.navigation" }, -- Plugins to ease navigation in and between files
     { import = "jslaig.plugins.tools" }, -- Additional tools
-    -- { import = "jslaig.plugins.ide" },
+    { import = "jslaig.plugins.ide" }, -- Syntax and workspace aware plugins for references, linting, syntax highlighting, etc
   checker = {
     enabled = true,
     notify = false,
