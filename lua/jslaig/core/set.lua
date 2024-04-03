@@ -12,6 +12,7 @@ o.clipboard = "unnamedplus"
 o.splitright = true
 o.hidden = true
 o.lazyredraw = true
+o.expandtab = true
 
 opt.tabstop = 4
 opt.softtabstop = 4
