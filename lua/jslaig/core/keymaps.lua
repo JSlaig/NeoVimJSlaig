@@ -58,6 +58,8 @@ mapper("x", "<c-k>", ":m '<-2<cr>gv=gv")
 -- SIDENOTE: Use "I" after the replace in order to be case-sensitive
 mapper("n", "<leader>/r", ":%s/")
 
+-- Command to auto-indent whole file
+mapper("n", "<leader>fw", ":<C-u>normal gg=G``<CR>")
 
 -- ############################################################################
 -- Mappings for fast moving across the file

@@ -5,11 +5,11 @@ return {
         local lint = require("lint")
 
         lint.linters_by_ft = {
-            -- javascript = { "eslint_d", "eslint" },
-            -- java = { "ast-grep" },
-            -- css = { "eslint_d" },
-            -- html = { "eslint_d" },
-            -- json = { "eslint_d" },
+            javascript = { "eslint_d", "eslint" },
+            java = { "ast-grep" },
+            css = { "eslint_d" },
+            html = { "eslint_d" },
+            json = { "eslint_d" },
             -- yaml = { "eslint_d" },
             lua = { "selene" },
         }
