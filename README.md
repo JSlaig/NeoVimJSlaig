@@ -2,6 +2,8 @@
 
 This repository contains my configuration files for Neovim, which include my preferred plugins and keybinds.
 
+---
+
 ## Installation
 
 ### Windows
@@ -18,7 +20,7 @@ This repository contains my configuration files for Neovim, which include my pre
     ~\AppData\Local\nvim\
     ```
     
-    > **Note:** You may want to compile the plugins using `:PackerSync` command afterwards.
+    > **Note:** You may want to manage the plugins using `:Lazy` command afterwards.
 
 3. Need to install dependencies
     
@@ -43,27 +45,46 @@ This repository contains my configuration files for Neovim, which include my pre
    - Linux: `~/.config/nvim/`
    - macOS: `~/.config/nvim/`
    
-   > **Note:** You may want to compile the plugins using `:PackerSync` command afterwards.
+   > **Note:** You may want to manage the plugins using `:Lazy` command afterwards.
+
+---
 
 ## Plugins
 
 This configuration uses the following plugins:
 
-- [Nerdtree](https://github.com/preservim/nerdtree): A file explorer for Vim
+### Appearance plugins
+- [Catpuccin](https://github.com/catppuccin/nvim): Colorscheme currently used
+- [Dashboard](https://github.com/glepnir/dashboard-nvim): Customizable dashboard for Neovim
+- [Dressing](https://github.com/stevearc/dressing.nvim): Better UI for user input 
 - [Lualine](https://github.com/hoob3rt/lualine.nvim): A fast and customizable statusline for Vim
-- [Treesitter](https://github.com/nvim-treesitter/nvim-treesitter): A parser generator for programming languages
+- [Nvim-notify](https://github.com/rcarriga/nvim-notify): Wrapper for vim notifications
+
+### Navigation plugins
+- [Nvim-tree](https://github.com/nvim-tree/nvim-tree.lua): A file explorer for Vim
 - [Telescope](https://github.com/nvim-telescope/telescope.nvim): A highly extensible fuzzy finder for Vim
 - [Harpoon](https://github.com/ThePrimeagen/harpoon): A set of keybindings to help navigate between files
+- [Leap](https://github.com/rubberydub/leap.vim): A visual mode motion plugin
+- [Buffer-manager](https://github.com/j-morano/buffer_manager.nvim): Harpoon-like buffer manager 
+
+### IDE
+- [Treesitter](https://github.com/nvim-treesitter/nvim-treesitter): A parser generator for programming languages
+- [Treesitter-textobjects](https://github.com/nvim-treesitter/nvim-treesitter-textobjects): Syntax aware text-objects, select, move, swap, and peek support.
+- [Mason](https://github.com/williamboman/mason.nvim): Lsp, Linters, Dap and Formatters package manager plugin
+- [Conform](https://github.com/stevearc/conform.nvim): Code formatter plugin
+- [Nvim-lint](https://github.com/mfussenegger/nvim-lint): Code linter plugin 
+- [Nvim-cmp](https://github.com/hrsh7th/nvim-cmp): Lsp completion engine plugin
+- [Autopairs](https://github.com/windwp/nvim-autopairs): Auto-close tags plugin 
+
+### Tools
 - [Undotree](https://github.com/mbbill/undotree): A visualizer for undo history tree
-- [LSP-Zero](https://github.com/creativenull/lsp-zero.nvim): A lightweight Language Server Protocol implementation for Neovim
-- [Dashboard](https://github.com/glepnir/dashboard-nvim): A customizable dashboard for Neovim
-- [Tagbar](https://github.com/majutsushi/tagbar): A sidebar that displays tags generated from source code
 - [ToggleTerm](https://github.com/akinsho/toggleterm): A floating terminal
 - [Vimcaps](https://github.com/suxpert/vimcaps): Remove CapsLock when on normal mode
-- [Leap](https://github.com/rubberydub/leap.vim): A visual mode motion plugin
-- [Oil](https://github.com/getzola/oil.nvim): A file explorer as a buffer
-- [Vs Tasks](https://github.com/lfv89/vs-tasks.nvim): Run visual studio tasks.json files
+- [Vs-tasks](https://github.com/lfv89/vs-tasks.nvim): Run visual studio tasks.json files
+- [Nvim-early-retirement](https://github.com/chrisgrieser/Nvim-early-retirement): Auto-closing buffers
+- [Vim-commentary](https://github.com/tpope/Vim-commentary): Comment lines with `gcc` and visual-selected block with `gc`
 
+---
 
 ## Keybinds
 
@@ -83,8 +104,8 @@ Here are some of the most important Vim motion keybinds that are used in this co
 - `Ctrl + o`: Move to the previous cursor position
 - `Ctrl + i`: Move to the next cursor position
 - `Ctrl + h`: Move to the start of the line
-- `Ctrl + l`: Move to the end of the line
-- `Ctrl + j`: Move to the end of the file
+- `[[`: Move to the end of the line
+- `]]`: Move to the end of the file
 - `Ctrl + k`: Move to the start of the file
     > **Note:** These work either in normal and visual mode.
 
@@ -112,15 +133,41 @@ Here are some of the most important Vim motion keybinds that are used in this co
 
 - `:TSPlaygroundToggle`: Toggle the Treesitter Playground
 - `:TSHighlightCapturesUnderCursor`: Show the syntax highlighting groups for the text under the cursor
+- `:InspectTree`: Show the symbol highlighting tree for incremental selection of lexical nodes  
 
-#### Fzf
+- `<C-s>`: Incremental search 
+
+- `]f`: Jump to start of the next function 
+- `]F`: Jump to end of the next function 
+- `[f`: Jump to start of the prev function 
+- `vaf`: Select around function
+- `vif`: Select inside function
+
+- `]i`: Jump to start of the next conditional 
+- `]I`: Jump to end of the next conditional 
+- `[i`: Jump to start of the prev conditional 
+- `vai`: Select around conditional
+- `vii`: Select inside conditional
+
+- `]l`: Jump to start of the next loop 
+- `]L`: Jump to end of the next loop 
+- `[l`: Jump to start of the prev loop 
+- `val`: Select around loop
+- `vil`: Select inside loop
+
+- `vr=`: Select right side of assignment
+- `vl=`: Select left side of assignment
+
+#### Telescope
 
 - `<leader> + ff`: Open the Telescope prompt to search for all files
 - `<leader> + fg`: Open the Telescope prompt to use live-grep on files
-- `<leader> + sff`: Open the Telescope prompt to use search for all files and open them on a split window
-- `<leader> + sfg`: Open the Telescope prompt to use live-grep on files and open them on a split window
+- `<leader> + fc`: Open the Telescope prompt to find string under cursor
    > **Note:** You need to install some dependencies with a package manager such as apt, chocolatey or brew.
    > **Note:** Dependencies are: **fd** and **ripgrep**.
+
+- `<C-j>`: Navigate to the next file in the list
+- `<C-k>`: Navigate to the prev file in the list
 
 #### Harpoon
 
@@ -128,7 +175,7 @@ Here are some of the most important Vim motion keybinds that are used in this co
 - `<leader> + a`: Add file to Harpoon
 - `<leader> + j`: Navigate to next "Harpooned" file
 - `<leader> + k`: Navigate to previous "Harpooned" file
-- `<leader> + 1-4`: Navigate to the "n Harpooned" file
+- `<leader> + 1-9`: Navigate to the "n Harpooned" file
 
 #### Buffer Manager
 
@@ -139,18 +186,10 @@ Here are some of the most important Vim motion keybinds that are used in this co
 - `<leader> + bt`: Open menu to read and run .vscode/tasks.json
   > **Note:** This is a plugin that lets you run visual studio config fileso
   
-#### Tagbar
-
-- `<leader> + gb`: Toggle tagbar menu
-
 #### Leap
 - `s`: Forward search
 - `m`: Backward search
   >**Note:** Real fun to use this to be honest
-
-#### Oil
-- `<leader>oil`: Open oil menu
-  >**Note:** File manager as buffer
 
 #### ToggleTerm
 

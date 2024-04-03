@@ -17,6 +17,10 @@ return {
                         -- params/arguments
                         ["ia"] = { query = "@parameter.inner", desc = "Select inner part of a parameter/arg" },
 
+                        -- conditionals
+                        ["ai"] = { query = "@conditional.outer", desc = "Select outer part of a loop" },
+                        ["ii"] = { query = "@conditional.inner", desc = "Select inner part of a loop" },
+
                         -- loops
                         ["al"] = { query = "@loop.outer", desc = "Select outer part of a loop" },
                         ["il"] = { query = "@loop.inner", desc = "Select inner part of a loop" },
