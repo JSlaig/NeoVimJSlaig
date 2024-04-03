@@ -1,3 +1,4 @@
 return { 
-  'stevearc/dressing.nvim' -- Better ui for choices and user input
+  'stevearc/dressing.nvim', -- Better ui for choices and user input
+    event = "VimEnter",
 }

@@ -1,3 +1,4 @@
 return {
-  "suxpert/vimcaps",
+	"suxpert/vimcaps",
+	event = { "BufReadPre", "BufNewFile" },
 }
