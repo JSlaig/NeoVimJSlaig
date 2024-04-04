@@ -1,12 +1,19 @@
 return {
     "mfussenegger/nvim-lint",
+    dependencies = {
+        "rshkarin/mason-nvim-lint"
+    },
     event = { "BufReadPre", "BufNewFile", "BufWritePost" },
     config = function()
         local lint = require("lint")
 
+        require ('mason-nvim-lint').setup({
+            ensure_installed = {'eslint_d', 'selene'},
+        })
+
         lint.linters_by_ft = {
-            javascript = { "eslint_d", "eslint" },
-            java = { "ast-grep" },
+            javascript = { "eslint_d" },
+            -- java = { "" },
             css = { "eslint_d" },
             html = { "eslint_d" },
             json = { "eslint_d" },
