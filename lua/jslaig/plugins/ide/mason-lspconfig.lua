@@ -1,5 +1,6 @@
 return {
-   "williamboman/mason-lspconfig.nvim",
+    "williamboman/mason-lspconfig.nvim",
+    lazy = true,
     config = function()
         require("mason-lspconfig").setup({
             --list of servers for mason to install
