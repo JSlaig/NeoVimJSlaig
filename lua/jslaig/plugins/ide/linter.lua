@@ -14,6 +14,7 @@ return {
         lint.linters_by_ft = {
             javascript = { "eslint_d" },
             -- java = { "" },
+            scss = { "stylelint" },
             css = { "eslint_d" },
             html = { "eslint_d" },
             json = { "eslint_d" },
@@ -27,7 +28,8 @@ return {
             callback = function()
                 lint.try_lint()
             end,
-        })
+        })       
+
 
         vim.keymap.set("n", "<leader>lt", function()
             lint.try_lint()
