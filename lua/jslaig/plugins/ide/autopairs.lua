@@ -1,4 +1,3 @@
---TODO: Tweak this to be useful and have a decent keybind
 return {
     "windwp/nvim-autopairs",
     event = "InsertEnter",
@@ -7,7 +6,6 @@ return {
         if not status_ok then
             return
         end
-
         npairs.setup{
             check_ts = true,
             ts_config = {
@@ -17,7 +15,7 @@ return {
             }, 
             disable_filetype = { "TelescopePrompt", "spectre_panel"},
             fast_wrap = {
-                map = "<M-e>",
+                map = "<M-e>", -- Alt + e
                 chars = { "{", "[", "(", '"', "'" },
                 pattern = string.gsub([[ [%'%"%)%>%]%)%}%,] ]], "%s+", ""),
                 offset = 0, -- Offset from pattern match
@@ -35,6 +33,22 @@ return {
             return
         end
         cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done { map_char = { tex = "" } }) 
+
+        local toggle_status = true
+        vim.api.nvim_set_keymap("n", "<leader>ta", "", {
+            noremap = true,
+            silent = true,
+            callback = function()
+                toggle_status = not toggle_status
+                if toggle_status then
+                    npairs.enable()
+                    require("notify")("AutoPairs Enabled", "info") 
+                else
+                    npairs.disable()
+                    require("notify")("AutoPairs Disabled", "warn") 
+                end
+            end
+        })
     end
 }
 

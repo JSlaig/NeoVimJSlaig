@@ -19,7 +19,8 @@ opt.softtabstop = 4
 opt.shiftwidth = 4
 opt.expandtab = true
 
-opt.shell = "pwsh"
+o.shell = "pwsh"
+o.shellcmdflag = '-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command'
 
 opt.smartindent = true
 
