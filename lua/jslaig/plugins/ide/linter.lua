@@ -1,3 +1,4 @@
+--TODO: tweak this for better support on more langs and better error/warning display
 return {
     "mfussenegger/nvim-lint",
     dependencies = {

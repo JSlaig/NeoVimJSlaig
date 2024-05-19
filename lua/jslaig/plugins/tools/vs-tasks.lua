@@ -1,3 +1,4 @@
+--TODO: see if I can tweak it to integrate better
 return {
     "EthanJWright/vs-tasks.nvim",
     dependencies = {

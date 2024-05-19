@@ -1,3 +1,4 @@
+--TODO: Need to fix some errors when invoking these stuff
 return {
     "folke/trouble.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },

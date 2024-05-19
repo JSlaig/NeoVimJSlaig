@@ -1,3 +1,4 @@
+--TODO: review useful keymaps and functions from plugin, remove unnecessary
 return {
     "nvim-treesitter/nvim-treesitter-textobjects",
     lazy = true,

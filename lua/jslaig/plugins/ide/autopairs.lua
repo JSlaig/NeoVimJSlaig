@@ -1,4 +1,4 @@
-
+--TODO: Tweak this to be useful and have a decent keybind
 return {
     "windwp/nvim-autopairs",
     event = "InsertEnter",
