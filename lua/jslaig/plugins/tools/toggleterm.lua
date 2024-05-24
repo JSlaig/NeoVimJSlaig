@@ -34,9 +34,9 @@ return {
         end
 
         -- Map keys to toggle specific terminal instances
-        vim.api.nvim_set_keymap("n", "<leader>t1", "<cmd>lua toggle_term_instance(1)<CR>", { noremap = true, silent = true })
-        vim.api.nvim_set_keymap("n", "<leader>t2", "<cmd>lua toggle_term_instance(2)<CR>", { noremap = true, silent = true })
-        vim.api.nvim_set_keymap("n", "<leader>t3", "<cmd>lua toggle_term_instance(3)<CR>", { noremap = true, silent = true })
+        -- vim.api.nvim_set_keymap("n", "<leader>t1", "<cmd>lua toggle_term_instance(1)<CR>", { noremap = true, silent = true })
+        -- vim.api.nvim_set_keymap("n", "<leader>t2", "<cmd>lua toggle_term_instance(2)<CR>", { noremap = true, silent = true })
+        -- vim.api.nvim_set_keymap("n", "<leader>t3", "<cmd>lua toggle_term_instance(3)<CR>", { noremap = true, silent = true })
     end,
 }
 
