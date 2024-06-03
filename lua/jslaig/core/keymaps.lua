@@ -34,16 +34,16 @@ mapper("n", "r", "<C-r>")
 mapper("n", "tt", ":t.<CR>")
 
 -- Copy to clipboard in visual mode
-mapper("x", "c", '"+y')
+-- mapper("x", "c", '"+y')
 
 -- Cut to clipboard in visual mode
-mapper("x", "x", '"+d')
+-- mapper("x", "x", '"+d')
 
 -- Copy a whole line in normal mode by double-tapping "c"
-mapper("n", "cc", 'yy')
+-- mapper("n", "cc", 'yy')
 
 -- Cut a whole line in normal mode by double-tapping "x"
-mapper("n", "xx", 'dd')
+-- mapper("n", "xx", 'dd')
 
 -- Make d actually delete
 mapper("n", "dd", '"_dd')
@@ -65,11 +65,9 @@ mapper("n", "<leader>fw", ":<C-u>normal gg=G``<CR>")
 -- Mappings for fast moving across the file
 -- ############################################################################
 
+-- just like the primeagen would say, just ZZ like a real man
 -- "<leader>q" to quit
-mapper("n", "<leader>q", ":q!<CR>")
-
--- "<leader>wq" to save and quit
-mapper("n", "<leader>wq", ":wq<CR>")
+-- mapper("n", "<leader>q", ":q!<CR>")
 
 -- "<leader>w" to save
 mapper("n", "<leader>w", ":w<CR>")
