@@ -66,19 +66,9 @@ mapper("n", "<leader>fw", ":<C-u>normal gg=G``<CR>")
 -- ############################################################################
 
 -- just like the primeagen would say, just ZZ like a real man
--- "<leader>q" to quit
--- mapper("n", "<leader>q", ":q!<CR>")
 
 -- "<leader>w" to save
 mapper("n", "<leader>w", ":w<CR>")
-
--- Go to the end of the line with Ctrl + L
-mapper("n", "<C-l>", "$")
-mapper("x", "<C-l>", "$")
-
--- Go to the start of the line with Ctrl + H
-mapper("n", "<C-h>", "^")
-mapper("x", "<C-h>", "^")
 
 -- Create split
 mapper("n", "<leader>s", ":vsplit<CR>")
@@ -89,3 +79,9 @@ mapper("n", "<leader>y", "<C-w>l")
 mapper("n", "<leader>t", "<C-w>h")
 mapper("n", "<leader>vk", "<C-w>k")
 mapper("n", "<leader>vj", "<C-w>j")
+
+mapper("n", "[[", "gg^")
+mapper("v", "[[", "gg^")
+
+mapper("n", "]]", "G$")
+mapper("v", "]]", "G$")

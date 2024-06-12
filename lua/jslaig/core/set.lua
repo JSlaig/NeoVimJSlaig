@@ -1,4 +1,3 @@
-
 local o = vim.o
 local wo = vim.wo
 local opt = vim.opt
@@ -31,6 +30,8 @@ opt.backup = false
 
 --opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 opt.undofile = true
+
+opt.cursorcolumn = true
 
 opt.hlsearch = false
 opt.incsearch = true

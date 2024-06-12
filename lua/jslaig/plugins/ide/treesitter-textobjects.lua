@@ -12,23 +12,23 @@ return {
 
                     keymaps = {
                         -- Select sides of variable assignments
-                        ["l="] = { query = "@assignment.lhs", desc = "Select left hand side of an assignment" },
-                        ["r="] = { query = "@assignment.rhs", desc = "Select right hand of an assignment" },
+                        -- ["l="] = { query = "@assignment.lhs", desc = "Select left hand side of an assignment" },
+                        -- ["r="] = { query = "@assignment.rhs", desc = "Select right hand of an assignment" },
 
                         -- params/arguments
-                        ["ia"] = { query = "@parameter.inner", desc = "Select inner part of a parameter/arg" },
+                        -- ["ia"] = { query = "@parameter.inner", desc = "Select inner part of a parameter/arg" },
 
                         -- conditionals
-                        ["ai"] = { query = "@conditional.outer", desc = "Select outer part of a loop" },
-                        ["ii"] = { query = "@conditional.inner", desc = "Select inner part of a loop" },
+                        -- ["ai"] = { query = "@conditional.outer", desc = "Select outer part of a loop" },
+                        -- ["ii"] = { query = "@conditional.inner", desc = "Select inner part of a loop" },
 
                         -- loops
-                        ["al"] = { query = "@loop.outer", desc = "Select outer part of a loop" },
-                        ["il"] = { query = "@loop.inner", desc = "Select inner part of a loop" },
+                        -- ["al"] = { query = "@loop.outer", desc = "Select outer part of a loop" },
+                        -- ["il"] = { query = "@loop.inner", desc = "Select inner part of a loop" },
                         
                         -- function
-                        ["af"] = { query = "@function.outer", desc = "Select outer part of a function def" },
-                        ["if"] = { query = "@function.inner", desc = "Select inner part of a function def" },
+                        -- ["af"] = { query = "@function.outer", desc = "Select outer part of a function def" },
+                        -- ["if"] = { query = "@function.inner", desc = "Select inner part of a function def" },
                     },
                 },
                 move = {
