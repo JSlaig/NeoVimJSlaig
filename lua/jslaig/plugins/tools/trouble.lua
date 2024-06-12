@@ -1,4 +1,3 @@
---NOTE: Make sure to have installed ripgrep -> Windows (choco install ripgrep)
 return {
     "folke/trouble.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
