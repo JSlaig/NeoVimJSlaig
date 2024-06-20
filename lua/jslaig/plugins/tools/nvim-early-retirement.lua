@@ -4,7 +4,7 @@ return {
 	config = function()
 		require("early-retirement").setup({
 			-- If a buffer has been inactive for this many minutes, close it.
-			retirementAgeMins = 10,
+			retirementAgeMins = 5,
 
 			-- Filetypes to ignore.
 			ignoredFiletypes = {},
@@ -23,7 +23,7 @@ return {
 
 			-- Ignore buffers with unsaved changes. If false, the buffers will
 			-- automatically be written and then closed.
-			ignoreUnsavedChangesBufs = true,
+			ignoreUnsavedChangesBufs = false,
 
 			-- Ignore non-empty buftypes, for example terminal buffers
 			ignoreSpecialBuftypes = true,

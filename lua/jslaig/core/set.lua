@@ -32,6 +32,7 @@ opt.backup = false
 opt.undofile = true
 
 opt.cursorcolumn = true
+opt.cursorline = true
 
 opt.hlsearch = false
 opt.incsearch = true

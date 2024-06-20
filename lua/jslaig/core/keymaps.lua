@@ -1,5 +1,5 @@
 local mapper = function(mode, key, result)
-  vim.api.nvim_set_keymap(mode, key, result, {noremap = true, silent = true})
+    vim.api.nvim_set_keymap(mode, key, result, {noremap = true, silent = true})
 end
 
 -- Set up the leader key
@@ -9,8 +9,8 @@ vim.g.maplocalleader = ' '
 vim.opt.backspace = '2'
 vim.opt.showcmd = true
 vim.opt.laststatus = 2
+
 vim.opt.autowrite = true
-vim.opt.cursorline = true
 vim.opt.autoread = true
 
 -- use spaces for tabs and whatnot
@@ -32,18 +32,6 @@ mapper("n", "r", "<C-r>")
 
 -- "tt" To duplicate line
 mapper("n", "tt", ":t.<CR>")
-
--- Copy to clipboard in visual mode
--- mapper("x", "c", '"+y')
-
--- Cut to clipboard in visual mode
--- mapper("x", "x", '"+d')
-
--- Copy a whole line in normal mode by double-tapping "c"
--- mapper("n", "cc", 'yy')
-
--- Cut a whole line in normal mode by double-tapping "x"
--- mapper("n", "xx", 'dd')
 
 -- Make d actually delete
 mapper("n", "dd", '"_dd')
@@ -85,3 +73,9 @@ mapper("v", "[[", "gg^")
 
 mapper("n", "]]", "G$")
 mapper("v", "]]", "G$")
+
+mapper("n", "gg", "gg^")
+mapper("v", "gg", "gg^")
+
+mapper("n", "G", "G^")
+mapper("v", "G", "G^")
