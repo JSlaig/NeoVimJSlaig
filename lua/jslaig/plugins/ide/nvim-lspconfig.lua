@@ -16,7 +16,10 @@ return {
 
             opts.desc = "Show LSP references"
 
+            -- This one is not working
             keymap.set("n", "<leader>gr", "<cmd>Telescope lsp_references<CR>", opts)
+
+            -- Works only on current buffer
             keymap.set("n", "<leader>gd", vim.lsp.buf.declaration, opts)
         end
     end
